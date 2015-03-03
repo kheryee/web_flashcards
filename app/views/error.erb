@@ -1,8 +1,14 @@
-<div class="container">
-  <h1>Welcome to Dummy Users</h1>
+<head>
+<style>
+  .container {color:red}
+</style>
+</head>
 
+<div class="container">
+<h1>Error</h1>
+<p>Wrong email/password combination</p>
   <form action="/login" method="post">
-    <p>Login to your account:</p>
+    <p>Please login again:</p>
     <input type="text" name="email" placeholder="Your email">
     <input type="password" name="password" placeholder="Your password">
     <input type="submit" value="Log in">
@@ -10,7 +16,7 @@
 
 
   <form action="/register" method="post">
-    <p>Register a new account here:</p>
+    <p>Or register a new account here:</p>
     <input type="text" name="user[email]" placeholder="Your email">
     <input type="password" name="user[password]" placeholder="Your password">
     <input type="submit" value="Register!">
