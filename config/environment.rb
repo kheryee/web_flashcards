@@ -26,8 +26,11 @@ APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
 
+
 # Set up the controllers and helpers
-Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
+require "#{APP_ROOT}/app/controllers/user.rb"
+
+Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file}
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
