@@ -1,0 +1,10 @@
+<div class="container"><br>
+
+<% card = @deck.cards.sample %>
+<%= card.question %>
+  <form action="/deck/<%= @deck.id %>/card/<%= card.id %>" method="post">
+    <input type="text" name="answer" placeholder="meaning">
+    <input type="submit" value="Answer">
+  </form>
+  <br>
+</div>

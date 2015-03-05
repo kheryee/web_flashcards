@@ -2,10 +2,9 @@ class Card < ActiveRecord::Base
   belongs_to :deck
   has_many :guesses
 
-  def self.check_answer(card_id, answer)
-    card = self.find(card_id)
+  def check_answer(answer)
 
-    if card.answer == answer
+    if self.answer == answer
       true
     else
       false
