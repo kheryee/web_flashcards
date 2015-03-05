@@ -9,17 +9,19 @@
 <h2>Wrong email/password combination</h2>
   <form action="/login" method="post">
     <p>Please login again:</p>
-    <input type="text" name="email" placeholder="Your email">
-    <input type="password" name="password" placeholder="Your password">
+    <input type="text" name="username_or_email" placeholder="username/email">
+    <input type="password" name="password" placeholder="password">
     <input type="submit" value="Log in">
   </form>
 
 
   <form action="/register" method="post">
     <p>Or register a new account here:</p>
-    <input type="text" name="user[email]" placeholder="Your email">
-    <input type="password" name="user[password]" placeholder="Your password">
+    <input type="text" name="user[username]" placeholder="Username">
+    <input type="text" name="user[email]" placeholder="email">
+    <input type="password" name="user[password]" placeholder="password">
     <input type="submit" value="Register!">
   </form>
+  <br><br>
 </div>
 

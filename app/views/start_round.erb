@@ -1,0 +1,12 @@
+<div class="container">
+
+<% @deck.cards.each do |x| %>
+  <%= x.question %>
+  <form action="/deck/<%= @deck.id %>/card/<%= .id %>" method="post">
+    <input type="text" name="answer" placeholder="Your answer">
+    <input type="submit" value="Answer">
+  </form>
+  <br>
+<% end %>
+
+</div>

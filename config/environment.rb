@@ -11,6 +11,7 @@ require 'rubygems'
 require 'uri'
 require 'pathname'
 require 'byebug'
+require 'open-uri'
 
 require 'pg'
 require 'active_record'

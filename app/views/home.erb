@@ -1,40 +1,16 @@
 <div class="container">
-  <h1>URL Shortener</h1>
+  <h1>Flashy</h1>
+  <h2>Your best languange learning buddy.</h2>
+  <h3>Welcome back, <%= @user.username %></h3>
   <p>Your email: <%= @user.email %></p>
   <a href="/user/<%= @user.id %>"<p>Your profile</p></a>
 
-
-
-
-  <%if @user.urls.any? %>
-
-  <form action="/urls" method="post">
-    <p>Enter the full URL here:</p>
-    <p><input type="text" name="long_url"></p>
-    <input type="submit" value="Enter">
-  </form>
-  <h2>Your URLs:</h2>
-    <table>
-      <tr>
-        <th>Original URL</th>
-        <th>Shortened URL</th>
-      </tr>
-      <tr>
-        <td> <% @user.urls.each do |url| %>
-    <p><%= url.long_url %>
-      <%end%></p></td>
-        <td>  <% @user.urls.each do |url| %>
-    <a href="/<%= url.short_url%>"><p>/<%= url.short_url%></p></a>
-    <% end %></td>
-      </tr></table>
-  <% else %>
-  <h2>You don't have any URL yet :(</h2>
-  <form action="/urls" method="post">
-    <input type="text" name="long_url" placeholder="Enter full URL">
-    <input type="submit" value="Create one!">
-  </form>
+  <h3>Select a deck from below:</h3>
+  <% @decks.each do |x| %>
+  <a href="/deck/<%= x.id %>"><%= x.name %></a>
   <% end %>
-  <br>
+
+  <br><br><br>
     <form action="/logout" method="get">
       <input type="submit" value="Log out">
     </form>

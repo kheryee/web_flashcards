@@ -5,13 +5,13 @@
 </head>
 
 <div class="container">
-  <h1>Welcome to URL Shortener</h1>
+  <h1>Welcome to Flashy!</h1>
 
-  <h2>Log in or sign up to save your URLs!</h2>
+  <h3>Log in or sign up to start learning!</h3>
   <form action="/login" method="post">
-    <p>Login to your account:</p>
-    <input type="text" name="email" placeholder="Your email">
-    <input type="password" name="password" placeholder="Your password">
+    <p>Login to account:</p>
+    <input type="text" name="username_or_email" placeholder="username/email">
+    <input type="password" name="password" placeholder="password">
     <input type="submit" value="Log in">
   </form>
 
@@ -19,8 +19,9 @@
 
   <form action="/register" method="post">
     <p>Register a new account here:</p>
-    <input type="text" name="user[email]" placeholder="Your email">
-    <input type="password" name="user[password]" placeholder="Your password">
+    <input type="text" name="user[username]" placeholder="Username">
+    <input type="text" name="user[email]" placeholder="email">
+    <input type="password" name="user[password]" placeholder="password">
     <input type="submit" value="Register!">
   </form>
   <br>
@@ -30,10 +31,5 @@
   <% end %>
 <% end %>
 <br>
-  <h3>Create a short URL without logging in:</h3>
-    <form action="/urls" method="post">
-    <p><input type="text" name="long_url" placeholder="Enter your full URL"></p>
-    <input type="submit" value="Shorten URL!">
-  </form>
 </div>
 

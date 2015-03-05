@@ -1,8 +1,11 @@
 enable :sessions
 
 get '/' do
-
-  erb :index
+  if session[:user]
+    @user = User.find session[:user]
+    @decks = Deck.all
+    erb :home
+  else
+    erb :index
+  end
 end
-
-

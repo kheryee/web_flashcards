@@ -1,7 +1,7 @@
 enable :sessions
 
 post '/login' do
-  @user = User.authenticate(params[:email], params[:password])
+  @user = User.authenticate(params[:username_or_email], params[:password])
   if @user
     session[:user] = @user.id
     redirect '/home'
@@ -25,8 +25,10 @@ post '/register' do
 end
 
 get '/home' do
+
   if session[:user]
     @user = User.find session[:user]
+    @decks = Deck.all
     erb :home
   else
     redirect '/access_denied'
